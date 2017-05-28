@@ -119,12 +119,12 @@ header {
     /*outline: 1px solid red;*/
 }
 
-.maim-img {
+.main-img {
     position: relative;
     width: 100%;
 }
 
-.maim-img img {
+.main-img img {
     width: 100%;
 }
 
@@ -133,7 +133,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 30%;
-    position: relative;
+    position: absolute;
     left: 35%;
     top: 21%;
     height: 16%;
