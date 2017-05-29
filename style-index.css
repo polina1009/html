@@ -265,11 +265,118 @@ header {
     font-size: 0.8vw;
 }
 
+.main-content {
+    position: relative;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
 .main-column {
-    height: 300px;
+    position: relative;
+    width: 80%;
+    height: 45vw;
+}
+
+.main-post {
+    width: 100%;
+    height: 20vw;
+    position: absolute;
+    right: 1%;
+    top: -2%;
+    z-index: 5;
+    background: white;
+    border-top: 4px solid #3db4ee;
+}
+
+.main-post-title {
+   display: inline-flex;
+    height: 5vw;
+    width: 100%;
+    align-items: center;
+}
+
+.main-post-title span {
+    padding-left: 2%;
+    font-family: League Gothic, serif;
+    color: #076e9f;
+    font-size: 2.9vw;
+}
+
+.main-post-info {
+    display: flex;
+    justify-content: space-between;
+    height: 7vw;
+}
+
+.main-post-img {
+    display: inline-block;
+    width: 15%;
+    margin-left: 2%;
+}
+
+.main-post-img img {
+    width: 40%;
+}
+
+.main-post-text {
+    display: inline-block;
+    margin-right: 4%;
+}
+
+.main-post-text span {
+    font-size: 1.1vw;
+    font-family: Arial;
+    line-height: 1.5;
+    color: #5c5c5c;
+}
+
+.main-post-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17%;
+}
+
+.blue-button {
+    display: inline-block;
+}
+
+button {
+    background: #0879a8;
+    box-shadow: 0 5px black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.social-info {
+    display: inline-flex;
+    width: 20%;
+    height: 2vw;
+    background: #3db4ee;
+    position: relative;
 }
 
 
+
+.left-column {
+    width: 20%;
+}
+
+.social-info .triangle {
+    position: absolute;
+    right: 0;
+    bottom: -0.5vw;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.5vw 0.5vw 0 0;
+    border-color: #007bff transparent transparent transparent;
+}
 
 
 
