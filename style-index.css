@@ -693,11 +693,12 @@ button {
 .component-stoke {
     position: relative;
     margin-right: 3.9%;
+    padding-top: 5%;
     height: 16.5vw;
+    border-right: 1px dotted lightgray;
 }
 
 .component-stoke__title {
-    margin-top: 5%;
     margin-bottom: 3%;
 }
 
