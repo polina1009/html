@@ -276,18 +276,21 @@ header {
 .main-column {
     position: relative;
     width: 80%;
-    height: 45vw;
+    /*height: 45vw;*/
 }
 
 .main-post {
     width: 100%;
-    height: 20vw;
-    position: absolute;
+    height: 17vw;
+    position: relative;
     right: 1%;
     top: -2%;
     z-index: 5;
     background: white;
     border-top: 4px solid #3db4ee;
+    border-right: 1px dotted #d5d5d5;
+    border-bottom: 1px dotted #d5d5d5;
+    border-left: 1px dotted #d5d5d5;
 }
 
 .main-post-title {
@@ -335,6 +338,7 @@ header {
 .main-post-buttons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-left: 17%;
 }
 
@@ -346,7 +350,7 @@ button {
     background: #0879a8;
     box-shadow: 0 5px black;
     color: white;
-    padding: 15px 32px;
+    padding: 13px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -355,16 +359,35 @@ button {
 
 .social-info {
     display: inline-flex;
-    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+    width: 15vw;
     height: 2vw;
+    margin-right: -0.8%;
     background: #3db4ee;
     position: relative;
 }
 
+.social-info .likes {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    width: 5vw;
+}
 
+.social-info .comments {
+    white-space: nowrap;
+    display: flex;
+    width: 7vw;
+    align-items: center;
+}
 
-.left-column {
-    width: 20%;
+.social-info .likes span,
+.social-info .comments span {
+    font-family: Arial;
+    font-size: 0.8vw;
+    color: #076e9f;
+    margin-left: 1vw;
 }
 
 .social-info .triangle {
@@ -375,12 +398,195 @@ button {
     height: 0;
     border-style: solid;
     border-width: 0.5vw 0.5vw 0 0;
-    border-color: #007bff transparent transparent transparent;
+    border-color: #076e9f transparent transparent transparent;
 }
 
 
+.another-post {
+    position: relative;
+    display: flex;
+}
+
+.post {
+    width: 65%;
+}
+
+.post-main-content {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 37vw;
+    height: 22vw;
+    margin-top: 1%;
+    margin-left: 1%;
+    background: #eaeaea;
+    border-radius: 20px 0 0 0;
+}
+
+.post-main-content:before, .post-main-content:after{
+     content: '';
+     position: absolute;
+     width: 50%;
+     height: 10%;
+     bottom: 15px;
+     left: 4px;
+     z-index: -1;
+     -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.6);
+     -moz-box-shadow: 0 15px 10px rgba(0,0,0,0.6);
+     -o-box-shadow: 0 15px 10px rgba(0,0,0,0.6);
+     box-shadow: 0 15px 10px rgba(0,0,0,0.6);
+ }
+
+.post-main-content:before {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.post-main-content:after{
+    left: auto;
+    right: 4px;
+
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
 
 
+.post-row1 {
+    padding: 5%;
+}
+
+.main-content__title {
+    width: 100%;
+    position: relative;
+}
+
+.main-content__title span {
+    font-family: "League Gothic";
+    font-size: 2.5vw;
+    color: #076e9f;
+}
+
+.main-content__info span {
+    font-family: Arial;
+    color: #a8a8a8;
+    font-size: 0.8vw;
+}
+
+.main-content__info span:nth-child(2) {color: #076e9f;}
+.main-content__info span:nth-child(4) {color: #076e9f;}
+
+.post-row2 {
+    padding: 5%;
+    padding-top: 0;
+}
+
+.main-content__text {
+    font-family: Arial;
+    color: #5c5c5c;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+.main-content__read-more a span {
+    color: #076e9f;
+    font-family: Arial;
+    font-size: 1vw;
+}
+
+.social-data {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background: #f4f3f3;
+    height: 2.5vw;
+}
+
+.social-data__likes,
+.social-data__comments {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: 100%;
+}
+
+.social-data__likes img,
+.social-data__comments img {
+    width: 1.5vw;
+}
+
+.social-data__likes span,
+.social-data__comments span {
+    font-family: Arial;
+    color: #076e9f;
+    font-size: 1vw;
+    padding: 10%;
+}
+
+.add-post {
+    width:100%;
+}
+
+.add-component {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    height: 5vw;
+    background: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-component:before, .add-component:after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 5%;
+    bottom: 85px;
+    left: 20px;
+    z-index: -10;;
+    -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 15px 10px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 15px 10px rgba(0,0,0,0.6);
+    box-shadow: 0 15px 10px rgba(0,0,0,0.6);
+}
+
+.add-component:before {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.add-component:after{
+    left: auto;
+    right: 20px;
+
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.add-component span {
+    font-family: Arial;
+    font-size: 1vw;
+    color: #636363;
+}
+
+.left-column {
+    width: 20%;
+}
 
 .map {
     width: 100%;
